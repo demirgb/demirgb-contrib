@@ -31,13 +31,11 @@ When the ESP8266 is rebooted, it should do a short test startup sequence, lighti
 `client.py` accepts a target hostname/IP and either an HTML hex value:
 
 ```
-./client.py 10.9.8.133 '#ff0000'  # Set to full red
+./client.py 10.9.8.133 --hex='#000000'  # Set to full red
 ```
 
 Or a set of three numbers (red, green, blue), with a range of 0 through 1023 (10 bits) for greater granularity than the hex representation's 8 bits:
 
 ```
-./client.py 10.9.8.133 843 138 833  # Set to a purple-ish
+./client.py 10.9.8.133 --raw=843,138,833  # Set to purple-ish
 ```
-
-
